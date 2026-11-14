@@ -18,7 +18,11 @@
         <br>
         <a href="exercicios/teste.html">00 -- Teste</a> |
         <a href="exercicios/texto1.html">01 -- Texto 01</a> |
-        <a href="exercicios/texto2.html">02 -- Texto 02</a>
+        <a href="exercicios/texto2.html">02 -- Texto 02</a> |
+        <a href="exercicios/listas.html">03 -- Listas </a> |
+        <a href="./desafios/listas.html">03.01 -- Desafio Listas</a> |
+        <a href="exercicios/links.html">04 -- Links</a> |
+        <a href="exercicios/tabelas.html">05 -- Tabela</a>
     </nav>
     <section id="conteudo"></section>
     <footer>
@@ -34,7 +38,18 @@
                     .then(resp => resp.text())
                     .then(html => conteudo.innerHTML = html)
             }
+            // Aqui eu anotei no caderno de uma forma diferente
+            conteudo.addEventListener('click', function (e) {
+                if (e.target.classList.contains('esconde')) {
+                    const sublista = e.target.nextElementSibling
+                
+                    if (sublista) {
+                    sublista.style.display = sublista.style.display === 'none' ? 'block' : 'none'
+                    }
+                }
+            })
         })
+
     </script>
 
 </body>
