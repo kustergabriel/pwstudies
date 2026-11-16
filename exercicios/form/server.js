@@ -10,5 +10,11 @@ app.post('/usuarios', (req,resp) => {
     resp.send('Parabens')
 })
 
+app.post('/usuarios/:id', (req,resp) => {
+    console.log(req.body)
+    console.log(req.params.id)
+    resp.send('alterado')
+})
+
 app.listen(1337)
 
